@@ -2,12 +2,9 @@ import 'dart:convert';
 import 'package:crypto/crypto.dart';
 
 /// 加密服务
-/// 默认实现：MD5加密，支持多种输出格式
+/// 示例加密逻辑，请自行增强加密服务的健壮性
 class EncryptionService {
-  /// 这是唯一的加密实现方法
   static String encrypt(String text) {
-
-    
     // 1. 计算完整的MD5（32位小写）
     final bytes = utf8.encode(text);
     final fullMd5Lower = md5.convert(bytes).toString();
@@ -25,12 +22,9 @@ class EncryptionService {
         break;
       }
     }
-    print('首字母大写: $md5_8_upper_first');
-    
     // 4. 前7位 + @符号
     final result = md5_8_upper_first.substring(0, 7) + '@';
-    print('最终结果: $result');
-    
+
     return result;
   }
 } 
