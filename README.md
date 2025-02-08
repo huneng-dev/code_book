@@ -1,8 +1,8 @@
 # code_book
 
-A new Flutter project.
+由 Cursor 使用 Flutter 框架构建的 密码本 安卓APP
 
-## Getting Started
+## 运行环境
 
 This project is a starting point for a Flutter application.
 
